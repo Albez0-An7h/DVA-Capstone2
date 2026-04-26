@@ -12,3 +12,9 @@ def plot_pie_chart(df, col):
     df[col].value_counts().plot.pie(autopct='%1.1f%%')
     plt.title(f'Pie chart of {col}')
     plt.show()
+
+
+def plot_boxplot(df, x_col, y_col):
+    sns.boxplot(x=x_col, y=y_col, data=df)
+    plt.title(f'Boxplot of {y_col} by {x_col}')
+    plt.show()
